@@ -1,0 +1,134 @@
+.header {
+  background-color: @blue;
+  padding: 13px 0 0;
+  color: white;
+  font-size: 12px;
+  .logo {
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    &-bottom {
+      padding-bottom: 13px;
+    }
+  }
+  .phone-link {
+    font-family: Ubuntu;
+    font-size: 24px;
+    font-weight: 300;
+  }
+  .border-top {
+    border-top: 1px solid #bcbcf6 !important;
+  }
+  .menu {
+    display: flex;
+    font-family: Ubuntu, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: 100%;
+    & > li {
+      margin: 0 10px;
+    }
+    .menu-item-has-children {
+      & > a {
+        .button();
+        background-color: transparent;
+        border-color: transparent;
+        &:hover {
+          background-color: transparent;
+          border-color: transparent;
+          color: white;
+        }
+      }
+    }
+    a[data-toggle=dropdown] {
+      position: relative;
+      padding-right: 25px;
+      &:after {
+        position: absolute;
+        right: 10px; /**/
+        top: 14px;
+        font-family: FontAwesome;
+        content: "\f078";
+        font-size: 8px;
+        transition: transform .2s;
+      }
+    }
+    .show a {
+      background-color: @darkblue !important;
+      border-color: white !important;
+      &:after {
+        .rotate(180deg);
+      }
+    }
+    .dropdown-menu {
+      background-color: @darkblue;
+      .border-radius(10px);
+      padding: 25px 20px 18px;
+      color: white;
+      font-weight: 500;
+      font-size: 14px;
+      text-transform: capitalize;
+      top: 30px !important;
+      left: -20px !important;
+      &:before {
+        content: '';
+        position: absolute;
+        top: -12px;
+        left: 30%;
+        width: 0;
+        height: 0;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+
+        border-bottom: 12px solid @darkblue;
+      }
+      a {
+        display: flex;
+        align-items: center;
+        margin-bottom: 7px;
+      }
+    }
+    .flag {
+      .size(28px);
+      display: inline-block;
+      background-size: 100% 100%;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .header {
+    .border-top {
+      margin-top: 15px;
+    }
+    .menu {
+      padding: 10px 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    .menu {
+      display: none;
+      flex-direction: column;
+      text-align: center;
+    }
+    .menu {
+      & > li {
+        margin: 5px 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .header {
+    text-align: center;
+    .phone-link {
+      margin: 10px 0;
+    }
+  }
+}
