@@ -1,0 +1,105 @@
+.page-template-page-visa {
+  .main {
+    background: url("../img/visa/main.png") no-repeat center bottom;
+    min-height: 540px;
+    .circle {
+      .size(64px);
+      background-color: rgba(255, 255, 255, 0.5);
+      border: 1px solid cornflowerblue;
+      .border-radius(50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+    }
+    .info-item {
+      margin-bottom: 90px;
+    }
+    .text {
+      font-size: 23px;
+      font-weight: 300;
+      text-transform: uppercase;
+      color: white;
+      margin-right: 25px;
+      b {
+        font-size: 26px;
+      }
+    }
+    .time {
+      font-size: 26px;
+      line-height: 35px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: @cian;
+      position: relative;
+      top: -15px;
+      b {
+        font-size: 73px;
+        position: relative;
+        top: 15px;
+      }
+    }
+  }
+  .countries-section {
+    background: url("../img/schengen-map.png") no-repeat center center;
+    background-size: unset;
+  }
+  .steps-section {
+    padding-bottom: 0;
+  }
+  .documents-section{
+    padding-bottom: 160px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-template-page-visa {
+    .main {
+      .text {
+        font-size: 19px;
+        b {
+          font-size: 21px;
+        }
+      }
+      .time {
+        font-size: 21px;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .page-template-page-visa {
+    .main {
+      padding-top: 20px;
+      .info-item {
+        margin-bottom: 10px;
+      }
+      .time {
+        margin-top: 15px;
+      }
+      .form-white {
+        padding-top: 10px;
+        .title {
+          color: @darkblue;
+        }
+        input:not(.submit) {
+          border-color: @darkblue;
+          color: @darkblue;
+          &::-webkit-input-placeholder {
+            color: @darkblue;
+          }
+          &:-moz-placeholder {
+            color: @darkblue;
+          }
+          &::-moz-placeholder {
+            color: @darkblue;
+          }
+          &:-ms-input-placeholder {
+            color: @darkblue;
+          }
+        }
+      }
+    }
+  }
+}

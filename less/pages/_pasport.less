@@ -1,0 +1,248 @@
+.page-template-page-pasport {
+  .main {
+    background: url("../img/pasport-main.png") no-repeat center bottom;
+    min-height: 540px;
+    .circle {
+      .size(64px);
+      background-color: rgba(255, 255, 255, 0.5);
+      border: 1px solid cornflowerblue;
+      .border-radius(50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+    }
+    .info-item {
+      margin-bottom: 90px;
+    }
+    .text {
+      font-size: 23px;
+      font-weight: 300;
+      text-transform: uppercase;
+      margin-right: 25px;
+      b {
+        font-size: 26px;
+      }
+    }
+    .time {
+      font-size: 26px;
+      line-height: 35px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: @cian;
+      position: relative;
+      top: -15px;
+      b {
+        font-size: 73px;
+        position: relative;
+        top: 15px;
+      }
+    }
+  }
+  .countries-section {
+    background: url("../img/schengen-map.png") no-repeat center center;
+    background-size: unset;
+    .document-item {
+      color: #333;
+      .circle {
+        .size(105px);
+        min-width: 105px;
+        margin-right: 12px;
+        .box-shadow(0 3px 16px rgba(52, 50, 123, 0.2));
+        .border-radius(50%);
+        border: 8px solid white;
+        background-color: @cian;
+        .flex-center();
+      }
+      .title {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 30px;
+        text-transform: uppercase;
+      }
+      .list {
+        margin-top: 18px;
+        font-size: 12px;
+        line-height: 22px;
+      }
+    }
+    .form {
+      .prices {
+        padding: 10px 0 10px 30px;
+        color: white;
+        font-size: 14px;
+        background-color: @cian;
+        margin: 25px 0 15px;
+      }
+    }
+    table {
+      width: ~"calc(100% - 42px)";
+      text-align: center;
+      th {
+        color: #666;
+        font-size: 14px;
+        padding-bottom: 15px;
+        font-weight: 400;
+      }
+      td {
+        padding: 5px 0;
+        &:first-child {
+          color: #333;
+          font-weight: 700;
+        }
+        &:last-child {
+          color: #7f0319;
+          font-weight: 700;
+          .old {
+            color: #666;
+            font-size: 14px;
+            font-weight: 400;
+            text-decoration: line-through;
+          }
+        }
+      }
+      tr {
+        &:nth-child(2n) {
+          background-color: whitesmoke;
+        }
+      }
+    }
+    .warning {
+      color: red;
+      font-size: 12px;
+      margin-top: 15px;
+    }
+    .list-title {
+      color: #666;
+      font-size: 14px;
+    }
+    ul {
+      font-size: 14px;
+      line-height: 24px;
+      font-weight: 600;
+      &.require {
+        li {
+          &:before {
+            color: red;
+            content: "\f054";
+          }
+        }
+      }
+      li {
+        position: relative;
+        padding-left: 15px;
+        &:before {
+          content: "\f058";
+          color: @cian;
+          position: absolute;
+          left: 0;
+          font-family: "FontAwesome";
+        }
+      }
+    }
+  }
+  .steps-section {
+    padding-bottom: 25px;
+  }
+  .special {
+    li {
+      font-size: 20px;
+      padding-left: 25px !important;
+      font-weight: 400 !important;
+      line-height: 36px;
+      &:before {
+        content: "\f00c" !important;
+        color: @cian;
+      }
+    }
+    .form-white {
+      background-color: #1eb5d4;
+      .border-radius(10px);
+      max-width: unset;
+      padding: 15px 60px;
+      .button {
+        margin: 0 auto;
+        display: block;
+        min-width: 200px;
+      }
+    }
+  }
+  .contacts-section {
+    background-image: url("../img/contacts-gray.png");
+    margin-top: 0;
+    padding-top: 100px;
+  }
+}
+
+@media (max-width: 991px) {
+  .page-template-page-pasport {
+    .contacts-section {
+      background: transparent;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .page-template-page-pasport {
+    .main {
+      .text {
+        font-size: 17px;
+        b {
+          font-size: 19px;
+        }
+      }
+      .time {
+        font-size: 19px;
+      }
+    }
+    .countries-section {
+      .document-item {
+        text-align: center;
+      }
+      table {
+        width: 100%;
+      }
+      .special {
+        ul {
+          margin-bottom: 25px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .page-template-page-pasport {
+    .main {
+      padding-top: 50px;
+      .info-item {
+        margin-bottom: 10px;
+      }
+      .time {
+        margin-top: 15px;
+      }
+      .form-white {
+        padding-top: 10px;
+        .title {
+          color: @darkblue;
+        }
+        input:not(.submit) {
+          border-color: @darkblue;
+          color: @darkblue;
+          &::-webkit-input-placeholder {
+            color: @darkblue;
+          }
+          &:-moz-placeholder {
+            color: @darkblue;
+          }
+          &::-moz-placeholder {
+            color: @darkblue;
+          }
+          &:-ms-input-placeholder {
+            color: @darkblue;
+          }
+        }
+      }
+    }
+  }
+}
